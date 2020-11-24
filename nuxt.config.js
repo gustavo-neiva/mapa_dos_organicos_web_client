@@ -11,7 +11,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
 
@@ -34,8 +34,29 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    '@nuxtjs/style-resources',
+    'nuxt-leaflet',
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        //import whole set
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['fas']
+        },
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: ['fab']
+        }
+        //import 2 icons from set
+        // please note this is PRO set in this example,
+        // you must have it in your node_modules to actually import
+      ]
+    }]
   ],
-
+  styleResources: {
+    scss: ['./assets/scss/*.scss']
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }

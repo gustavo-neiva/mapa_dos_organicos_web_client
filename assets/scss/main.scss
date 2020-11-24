@@ -1,0 +1,35 @@
+/* Import Bulma Utilities */
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+/* Variable changes go here */
+
+// Colours
+$primary: #0f8d0a;
+$secondary: #FFD866;
+$tertiary: lightgrey;
+$link: $primary !default;
+$link-hover: $secondary  !default;
+
+// Breakpoints
+$tablet: 724px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+$fullhd: 1344px + (2 * $gap);
+$navbar-height: 5rem;
+$navbar-item-img-max-height: 3rem;
+$tablet: 769px !default;
+$desktop: 1000px !default;
+$widescreen: 1192px !default;
+
+.main-title {
+  color: $secondary;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: $secondary !important;
+}
+
+/* Import the rest of Bulma */
+@import '~bulma';
